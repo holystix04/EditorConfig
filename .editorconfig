@@ -7,6 +7,11 @@ root = true
 [*]
 indent_style = space
 
+# YAML/JSON files
+[{*.yaml,*.yml,*.json,.prettierrc}]
+indent_size = 2
+tab_width = 2
+
 # XML project files
 [*.{csproj,vbproj,vcxproj,vcxproj.filters,proj,projitems,shproj}]
 indent_size = 4
@@ -21,7 +26,6 @@ indent_size = 4
 insert_final_newline = true
 charset = utf-8
 tab_width = 4
-indent_size = 4
 
 # Microsoft .NET properties
 csharp_indent_braces = false
@@ -447,34 +451,6 @@ resharper_configure_await_analysis_mode = disabled
 resharper_constructor_or_destructor_body = block_body
 resharper_continuous_indent_multiplier = 1
 resharper_continuous_line_indent = single
-resharper_cpp_align_first_arg_by_paren = false
-resharper_cpp_align_multiline_binary_expressions_chain = false
-resharper_cpp_align_multiline_parameter = true
-resharper_cpp_align_multiple_declaration = true
-resharper_cpp_align_ternary = align_not_nested
-resharper_cpp_allow_far_alignment = false
-resharper_cpp_anonymous_method_declaration_braces = next_line
-resharper_cpp_case_block_braces = next_line_shifted_2
-resharper_cpp_empty_block_style = multiline
-resharper_cpp_indent_switch_labels = false
-resharper_cpp_insert_final_newline = true
-resharper_cpp_int_align_comments = false
-resharper_cpp_invocable_declaration_braces = next_line
-resharper_cpp_keep_blank_lines_in_code = 2
-resharper_cpp_keep_blank_lines_in_declarations = 2
-resharper_cpp_keep_user_linebreaks = true
-resharper_cpp_max_line_length = 120
-resharper_cpp_new_line_before_catch = true
-resharper_cpp_new_line_before_else = true
-resharper_cpp_new_line_before_while = true
-resharper_cpp_other_braces = next_line
-resharper_cpp_outdent_commas = false
-resharper_cpp_space_around_binary_operator = true
-resharper_cpp_type_declaration_braces = next_line
-resharper_cpp_use_indent_from_vs = true
-resharper_cpp_wrap_arguments_style = wrap_if_long
-resharper_cpp_wrap_lines = true
-resharper_cpp_wrap_parameters_style = wrap_if_long
 resharper_csharp_align_first_arg_by_paren = true
 resharper_csharp_align_multiline_binary_expressions_chain = true
 resharper_csharp_align_multiline_parameter = true
@@ -2517,10 +2493,3 @@ dotnet_diagnostic.RMG020.severity = error # Unmapped source member
 [*.g.cs]
 generated_code = true
 dotnet_diagnostic.cs1591.severity = none
-
-[{*.har,*.inputactions,*.jsb2,*.jsb3,.babelrc,.eslintrc,.stylelintrc,bowerrc,jest.config}]
-indent_size = 2
-
-[{*.yaml,*.yml,*.json,.prettierrc,*.wplugin}]
-indent_size = 2
-tab_width = 2
