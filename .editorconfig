@@ -6,6 +6,8 @@ root = true
 # All files
 [*]
 indent_style = space
+charset = utf-8
+insert_final_newline = true
 
 # YAML/JSON files
 [{*.yaml,*.yml,*.json,.prettierrc}]
@@ -15,16 +17,16 @@ tab_width = 2
 # XML project files
 [*.{csproj,vbproj,vcxproj,vcxproj.filters,proj,projitems,shproj}]
 indent_size = 4
+tab_width = 4
 
 # XML config files
 [*.{props,targets,ruleset,config,nuspec,resx,vsixmanifest,vsct}]
 indent_size = 4
+tab_width = 4
 
 # Code files
 [*.{cs,csx,vb,vbx}]
 indent_size = 4
-insert_final_newline = true
-charset = utf-8
 tab_width = 4
 
 # Microsoft .NET properties
@@ -61,10 +63,10 @@ csharp_space_between_method_declaration_parameter_list_parentheses = false
 csharp_space_between_parentheses = false
 csharp_space_between_square_brackets = false
 csharp_style_namespace_declarations = file_scoped:warning
-csharp_style_var_elsewhere = true:warning
+csharp_style_var_elsewhere = false:warning
 csharp_style_var_for_built_in_types = false:warning
-csharp_style_var_when_type_is_apparent = true:warning
-csharp_using_directive_placement = outside_namespace:silent
+csharp_style_var_when_type_is_apparent = false:warning
+csharp_using_directive_placement = outside_namespace:error
 dotnet_diagnostic.bc40000.severity = warning
 dotnet_diagnostic.bc400005.severity = warning
 dotnet_diagnostic.bc40008.severity = warning
@@ -361,7 +363,8 @@ dotnet_style_qualification_for_event = false:suggestion
 dotnet_style_qualification_for_field = false:suggestion
 dotnet_style_qualification_for_method = false:suggestion
 dotnet_style_qualification_for_property = false:suggestion
-dotnet_style_require_accessibility_modifiers = for_non_interface_members:warning
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:error
+file_header_template = Copyright (c) TODO All rights reserved.\nConfidential and Proprietary - This software contains confidential and proprietary information\nowned by TODO. No part of this document may be used, photocopied, reproduced, transmitted, \nor translated to another language without the prior written consent of TODO.
 
 # ReSharper properties
 resharper_accessor_owner_body = expression_body
@@ -457,7 +460,7 @@ resharper_csharp_align_multiline_parameter = true
 resharper_csharp_align_multiple_declaration = true
 resharper_csharp_allow_far_alignment = true
 resharper_csharp_blank_lines_around_region = 2
-resharper_csharp_empty_block_style = together
+resharper_csharp_empty_block_style = multiline
 resharper_csharp_insert_final_newline = true
 resharper_csharp_int_align_comments = true
 resharper_csharp_keep_blank_lines_in_code = 1
@@ -516,7 +519,7 @@ resharper_force_control_statements_braces = do_not_change
 resharper_force_linebreaks_inside_complex_literals = true
 resharper_force_variable_declarations_on_new_line = false
 resharper_format_leading_spaces_decl = false
-resharper_for_built_in_types = use_var_when_evident
+resharper_for_built_in_types = use_explicit_type
 resharper_free_block_braces = next_line
 resharper_function_declaration_return_type_style = do_not_change
 resharper_function_definition_return_type_style = do_not_change
@@ -1579,7 +1582,7 @@ resharper_redundant_cast_highlighting = warning
 resharper_redundant_catch_clause_highlighting = warning
 resharper_redundant_check_before_assignment_highlighting = warning
 resharper_redundant_collection_initializer_element_braces_highlighting = hint
-resharper_redundant_comparison_with_boolean_highlighting = warning
+resharper_redundant_comparison_with_boolean_highlighting = error
 resharper_redundant_configure_await_highlighting = suggestion
 resharper_redundant_css_hack_highlighting = warning
 resharper_redundant_declaration_semicolon_highlighting = hint
@@ -2136,9 +2139,9 @@ dotnet_style_prefer_is_null_check_over_reference_equality_method = true:error
 dotnet_style_prefer_auto_properties = true:warning
 dotnet_style_object_initializer = true:warning
 dotnet_style_collection_initializer = true:warning
-dotnet_style_prefer_simplified_boolean_expressions = true:warning
+dotnet_style_prefer_simplified_boolean_expressions = true:suggestion
 dotnet_style_prefer_conditional_expression_over_assignment = true:warning
-dotnet_style_prefer_conditional_expression_over_return = true:warning
+dotnet_style_prefer_conditional_expression_over_return = true:suggestion
 dotnet_style_explicit_tuple_names = true:warning
 dotnet_style_prefer_inferred_tuple_names = true:warning
 dotnet_style_prefer_inferred_anonymous_type_member_names = true:warning
@@ -2162,7 +2165,7 @@ csharp_prefer_simple_default_expression = true:suggestion
 csharp_style_prefer_local_over_anonymous_function = true:suggestion
 csharp_style_prefer_index_operator = true:suggestion
 csharp_style_prefer_range_operator = true:suggestion
-csharp_style_implicit_object_creation_when_type_is_apparent = true:suggestion
+csharp_style_implicit_object_creation_when_type_is_apparent = true:warning
 csharp_style_inlined_variable_declaration = true:suggestion
 csharp_style_prefer_tuple_swap = true:suggestion
 csharp_style_deconstructed_variable_declaration = true:suggestion
@@ -2482,13 +2485,14 @@ dotnet_diagnostic.ca2250.severity = warning
 dotnet_diagnostic.ca2251.severity = warning
 dotnet_diagnostic.ca2253.severity = error
 dotnet_diagnostic.ca2254.severity = warning
-dotnet_diagnostic.sa1633.severity = silent
+dotnet_diagnostic.sa1633.severity = error
 dotnet_diagnostic.sa1634.severity = silent
 dotnet_diagnostic.sa1635.severity = silent
 dotnet_diagnostic.sa1636.severity = silent
 dotnet_diagnostic.VSTHRD200.severity = warning
 dotnet_diagnostic.RMG012.severity = error # Unmapped target member
 dotnet_diagnostic.RMG020.severity = error # Unmapped source member
+dotnet_diagnostic.SA1642.severity = error
 
 [*.g.cs]
 generated_code = true

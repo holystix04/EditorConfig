@@ -1,6 +1,5 @@
 {
-  "$schema":
-    "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
+  "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
   "settings": {
     "readabilityRules": {
       "allowBuiltInTypeAliases": true
@@ -25,6 +24,11 @@
       "newlineAtEndOfFile": "require",
       "allowConsecutiveUsings": true,
       "allowDoWhileOnClosingBrace": true
+    },
+    "documentationRules": {
+      "xmlHeader": false,
+      "companyName": "Glory Ltd",
+      "copyrightText": "Copyright (c) {companyName}. All rights reserved.\nConfidential and Proprietary - This software contains confidential and proprietary information\nowned by {companyName}. No part of this document may be used, photocopied, reproduced, transmitted,\nor translated to another language without the prior written consent of {companyName}."
     }
   }
 }
