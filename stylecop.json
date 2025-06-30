@@ -1,22 +1,46 @@
 {
   "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
   "settings": {
+    "indentation": {
+      "indentationSize": 4,
+      "tabSize": 4,
+      "useTabs": false
+    },
+    "spacingRules": {},
     "readabilityRules": {
       "allowBuiltInTypeAliases": true
     },
     "orderingRules": {
+      "elementOrder": [
+        "kind",
+        "accessibility",
+        "constant",
+        "static",
+        "readonly"
+      ],
+      "systemUsingDirectivesFirst": true,
       "usingDirectivesPlacement": "outsideNamespace",
-      "blankLinesBetweenUsingGroups": "require",
-      "systemUsingDirectivesFirst": true
+      "blankLinesBetweenUsingGroups": "require"
     },
     "namingRules": {
+      "allowCommonHungarianPrefixes": false,
+      "allowedHungarianPrefixes": [
+        "in",
+        "in",
+        "db",
+        "as",
+        "on",
+        "ip",
+        "is"
+      ],
+      "allowedNamespaceComponents": [],
+      "includeInferredTupleElementNames": false,
       "tupleElementNameCasing": "camelCase"
     },
     "maintainabilityRules": {
       "topLevelTypes": [
         "class",
         "interface",
-        "enum",
         "struct"
       ]
     },
@@ -26,9 +50,21 @@
       "allowDoWhileOnClosingBrace": true
     },
     "documentationRules": {
+      "documentExposedElements": true,
+      "documentInternalElements": true,
+      "documentPrivateElements": false,
+      "documentInterfaces": true,
+      "documentPrivateFields": false,
+      "companyName": "Glory Ltd.",
+      "copyrightText": "Copyright (c) {companyName} All rights reserved.\nConfidential and Proprietary - This software contains confidential and proprietary information\nowned by {companyName} No part of this document may be used, photocopied, reproduced, transmitted,\nor translated to another language without the prior written consent of {companyName}",
+      "variables": {},
       "xmlHeader": false,
-      "companyName": "Glory Ltd",
-      "copyrightText": "Copyright (c) {companyName}. All rights reserved.\nConfidential and Proprietary - This software contains confidential and proprietary information\nowned by {companyName}. No part of this document may be used, photocopied, reproduced, transmitted,\nor translated to another language without the prior written consent of {companyName}."
+      "headerDecoration": "",
+      "fileNamingConvention": "stylecop",
+      "documentationCulture": "en-US",
+      "excludeFromPunctuationCheck": [
+        "seealso"
+      ]
     }
   }
 }
